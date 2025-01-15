@@ -1,0 +1,23 @@
+\babel@toc {slovene}{}\relax 
+\contentsline {section}{\numberline {1}Uvod in namen seminarske naloge}{3}{}%
+\contentsline {paragraph}{}{3}{}%
+\contentsline {section}{\numberline {2}Cilji, hipoteze, sredstva}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Cilji}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Cilji v moči}{3}{}%
+\contentsline {paragraph}{Mesečni plan:}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Cilji v prehrani}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Hipoteze}{4}{}%
+\contentsline {paragraph}{}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Sredstva}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Analiza treningov}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Dnevnik prehrane}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Preverjanje napredka}{4}{}%
+\contentsline {section}{\numberline {3}Izračun bazalnega metabolizma}{4}{}%
+\contentsline {section}{\numberline {4}Rezultati in razlaga}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Rezultati v zvezi z močjo}{5}{}%
+\contentsline {paragraph}{}{5}{}%
+\contentsline {paragraph}{}{6}{}%
+\contentsline {paragraph}{}{6}{}%
+\contentsline {subsection}{\numberline {4.2}Rezultati v zvezi s prehrano}{7}{}%
+\contentsline {section}{\numberline {5}Zaključek in sklepi}{8}{}%
+\contentsline {section}{\numberline {6}Literatura in viri}{8}{}%

@@ -1,0 +1,196 @@
+\documentclass{article}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{array}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+\renewcommand{\figurename}{Slika}
+
+\begin{document}
+
+\title{Seminarska naloga pri predmetu Športna vzgoja}
+\author{Urban Gajšek}
+\date{\today}
+
+\maketitle
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/univerza-v-ljubljani.png}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Uvod in namen seminarske naloge}
+Dandanes se ljudje premalo gibamo, še posebej tisti, ki imamo sedeče delo. Pomembno je, da smo redno fizično aktivni, saj s tem ohranjamo svoje zdravje in dobro počutje.
+\paragraph{}
+Namen seminarske naloge je ustvarjanje delovnega zvezka, s katerim bom dokazal, da znam uporabiti pridobljeno teoretično in praktično znanje za uresničevanje zastavljenih ciljev.
+
+\section{Cilji, hipoteze, sredstva}
+\subsection{Cilji}
+\subsubsection{Cilji v moči}
+Kot cilj sem si zadal, da bom v 30 dneh lahko izboljšal število opravljenih zgibov iz 15 na 20. Ta cilj sem si izbral, ker je zame dosegljiv in hkrati izziv, pa tudi zato, ker je zgib zelo koristna vaja za krepitev zgornjega dela telesa, katerega uporabljam pri svojem športu - veslanju na divjih vodah.
+\paragraph{Mesečni plan:}
+Pripravil sem si mesečni plan, za katerega menim, da mi bo omogočil doseči zastavljeni cilj, hkrati pa ne bo preveč obremenjujoč:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Stange-mesecni-plan.png}
+    \caption{Posnetek zaslona mesečnega plana za izboljšanje števila opravljenih zgibov v istem poskusu iz aplikacije Google Calendar.} 
+    \label{fig:mesecni-plan}
+\end{figure}
+
+Plan je sledeč: Trikrat tedensko bom izvajal treninge na "štangah" oz. fitnesu na prostem, kjer bom izvajal vaje za krepitev zgornjega dela telesa - to bojo večinoma prav zgibi ali pa različne variacije zgibov. Če mi bo vspelo po vsakih dveh treninhig izboljšati število zgibov za vsaj 1, bom v trinajstih zastavljenih treningih dosegel svoj cilj.
+
+\subsubsection{Cilji v prehrani}
+Ker je prehrana zelo pomembna pri športni aktivnosti in pri regeneraciji in rasti mišič, sem si zadal tudi cilj, da bom v teh 30 dneh poskušal vsak dan zaužiti vsaj $130g$ beljakovin.
+
+\subsection{Hipoteze}
+
+Menim, da bom cilj dosegel prej kot v 30 dneh, saj že prej opazil, da lahko hitro napredujem pri zgibih, če redno treniram. Višjega cilja si nisem postavil, saj se velikokrat zgodi, da se kaj zalomi, in zmanjka časa za trening.
+\paragraph{}
+Menim tudi, da bo napredek sprva hiter, nato pa vse počasnejši, saj je to značilno za večino športnih aktivnosti.
+
+\subsection{Sredstva}
+
+\subsubsection{Analiza treningov}
+Vask trening bom opravljal z športno uro (Xiaomi Mi Band 5), ki mi bo merila srčni utrip in na podlagi tega bo ocenila, koliko kalorij sem porabil.
+
+\subsubsection{Dnevnik prehrane}
+Prvi teden bom beležil tudi kaj sem pojedel, da bom lahko spremljal, če imam zadosten vnos beljakovin, pa tudi koliko kalorij sem zaužil.
+
+\subsubsection{Preverjanje napredka}
+Vsak trening bom zabeležil maksimalno število zgibov, ki jih bom opravil v enem poskusu. Da bodo testi med seboj čim bolj podobni, jih bom vedno opravljal tik po ogravnju in opravil toliko zgibov, kolikor bom zmogel. Število zgibov bom beležil v zvezku, na koncu pa bom podatke predstavil v obliki grafa.
+
+\section{Izračun bazalnega metabolizma}
+Bazalni metabolizem sem izračunal po Mifflin-St Jeorjevi formuli, ki izgleda takole:
+\[
+BMR = 10 * weight + 6.25 * height - 5 * age + 5 
+\]
+
+kjer je $BMR$ bazni metabolizem (v $kcal$), $weight$ teža v kilogramih, $height$ višina v centimetrih, $age$ pa starost v letih. Po izračunu sem dobil vrednost $1900 kcal$.
+
+\section{Rezultati in razlaga}
+
+\subsection{Rezultati v zvezi z močjo}
+
+Na spodnjem grafu je razvidno, kako se je spreminjalo število zgibov, ki sem jih opravil v enem poskusu, skozi 13 treningov.
+
+\begin{figure}[H]
+\centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          title={Število opravljenih zgibov v enem poskusu v novembru},
+          xlabel={Dan v mesecu},
+          ylabel={Število zgibov},
+          grid=major,
+          xmin=1, xmax=30,
+          ymin=10, ymax=25
+        ]
+        \addplot coordinates {
+          (2,15) (4,17) (7,18) (9,16) (11,18) (14,19) (16,19) 
+          (18,18) (21,19) (23,20) (25,19) (28,20) (30,21)
+        };
+      \end{axis}
+    \end{tikzpicture}
+\caption{Napredek pri številu zgibov v enem poskusu skozi 13 treningov.}
+\end{figure}
+
+\paragraph{}
+Iz grafa je razvidno, da je število opravljenih zgibov v enem poskusu naraščalo skoraj linearno, z manjšimi odstopanji.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/srcni-utrip.jpg}
+    \caption{Posnetek zaslona aplikacije Mi Fit, ki prikazuje srčni utrip med treningom.} 
+    \label{fig:srcni-utrip}
+\end{figure}
+
+\paragraph{}
+Posnetek zaslona aplikacije Mi Fitness, ki prikazuje srčni utrip med treningom, je prikazan na sliki \ref{fig:srcni-utrip}. Povprečni uprip med treningom je bil $96bpm$, največji pa $122bpm$. Aplikacija je na podlagi srčnega utripa večji del treninga klasificirala kot "Light intensity". Rezultati so pričakovani, saj je bil trening sestavljen iz več serij zgibov, ki so bile med seboj ločene z dolgimi odmori, poleg tega pa glavna omejitev pri zgibih ni vzdržljivost, temveč moč. 
+
+\paragraph{}
+Slika \ref{fig:poraba-kalorij} pa prikazuje posnetek zaslona iz aplikacije Mi Fitness, iz katere je razvidno, da sem med treningom, ki je trajal $40 min$ porabil $215 kcal$. Glede na nizko aerobno intenzivnost treninga ter precej kratko trajanje, je poraba kalorij pričakovano nizka. Vredno pa je omeniti, da se pri treningih za moč porabi nekaj več kalorij še potem, ko se trening konča, saj telo potrebuje energijo za regeneracijo mišic.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/poraba-kalorij.jpg}
+    \caption{Poraba kalorij med treningom, ter ostali podatki} 
+    \label{fig:poraba-kalorij}
+\end{figure}
+
+\subsection{Rezultati v zvezi s prehrano}
+
+\begin{center}
+  \textbf{\Large Tedenski plan vadbe}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{tabularx}{\textwidth}{|c|X|X|X|X|X|X|X|X|}
+  \hline
+  \textbf{Dan} & Ponedeljek & Torek & Sreda & Četrtek & Petek & Sobota & Nedelja \\
+  \hline
+  \textbf{Vsebina} & & & & & & & & \\
+  \hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\textbf{\Large Dnevni plan prehrane in vadbe}
+
+\vspace{0.5cm}
+
+\begin{tabularx}{\textwidth}{|c|X|X|c|X|}
+  \hline
+  & \textbf{Obrok} & \textbf{Vnos kalorij} & \textbf{Vrsta in čas vadbe} & \textbf{Poraba kalorij} \\
+  \hline
+  \multirow{4}{*}{\textbf{Ponedeljek}} & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Torek}}      & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Sreda}}      & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Četrtek}}    & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Petek}}      & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Sobota}}     & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline
+  \multirow{4}{*}{\textbf{Nedelja}}    & Zajtrk & & & \\
+                                       & Kosilo & & & \\
+                                       & Večerja & & & \\
+                                       & Malica/e & & & \\
+  \hline                                     
+\end{tabularx}
+
+\section{Zaključek in sklepi}
+
+\section{Literatura in viri}
+
+\end{document}
