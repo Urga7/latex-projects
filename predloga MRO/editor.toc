@@ -1,0 +1,39 @@
+\babel@toc {slovene}{}\relax 
+\contentsline {titlech}{\numberline {1}Modeliranje protokola Ethernet}{7}{section*.4}%
+\authcount {1}
+\contentsline {authorch}{Luka Kosec Mikić in Urban Gajšek}{7}{section*.4}%
+\contentsline {section}{\numberline {1.1}Uvod}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Zgledi modeliranja Ethernet omrežij v INET ogrodju}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}arptest}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}vlan}{9}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}lans}{10}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Gradniki Ethernet omrežij}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Ethernet specifični gradniki}{13}{subsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.1}Ethernet Hub}{13}{subsubsection.1.3.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.1.2}Ethernet Switch}{13}{subsubsection.1.3.1.2}%
+\contentsline {subsubsection}{\numberline {1.3.1.3}Ethernet Host}{13}{subsubsection.1.3.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1.4}Ethernet Link}{14}{subsubsection.1.3.1.4}%
+\contentsline {subsection}{\numberline {1.3.2}Splošni gradniki}{14}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Wire Junction}{14}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Router}{15}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Standard host}{15}{subsubsection.1.3.2.3}%
+\contentsline {subsubsection}{\numberline {1.3.2.4}IPv4 Network Configurator}{16}{subsubsection.1.3.2.4}%
+\contentsline {section}{\numberline {1.4}Konstrukcija in analiza omrežij}{17}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Izbira parametrov}{17}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Razširjena dvojna zvezda}{17}{subsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.1}Opis omrežja}{17}{subsubsection.1.4.2.1}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Rezultati simulacij}{18}{subsubsection.1.4.2.2}%
+\contentsline {subsection}{\numberline {1.4.3}Binarno ethernet drevo}{21}{subsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Opis omrežja}{21}{subsubsection.1.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.4.3.2}Rezultati simulacij}{22}{subsubsection.1.4.3.2}%
+\contentsline {subsection}{\numberline {1.4.4}Zaporedno vezano omrežje}{23}{subsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.4.1}Opis omrežja}{23}{subsubsection.1.4.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.4.2}Rezultati simulacij}{25}{subsubsection.1.4.4.2}%
+\contentsline {subsection}{\numberline {1.4.5}Mešano omrežje}{27}{subsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.5.1}Opis omrežja}{27}{subsubsection.1.4.5.1}%
+\contentsline {subsubsection}{\numberline {1.4.5.2}Rezultati simulacij}{28}{subsubsection.1.4.5.2}%
+\contentsline {section}{\numberline {1.5}Zanimiva opažanja}{31}{section.1.5}%
+\contentsline {paragraph}{}{31}{section*.34}%
+\contentsline {section}{\numberline {1.6}Sklepi in zaključek}{33}{section.1.6}%
+\contentsline {paragraph}{}{33}{section*.38}%
+\contentsline {chapter}{Literatura}{35}{chapter*.39}%

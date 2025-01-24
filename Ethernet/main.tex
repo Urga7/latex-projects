@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[slovene]{babel}
+\usepackage[margin=2cm,bottom=3cm,foot=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{array}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+\renewcommand{\figurename}{Slika}
+
+\begin{document}
+
+\title{Modeliranje protokola Ethernet}
+\author{Luka Kosec Mikić in Urban Gajšek}
+\date{\today}
+
+\maketitle
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/univerza-v-ljubljani.png}
+\end{center}
+
+\newpage
+
+\section{Uvod}
+
+Ethernet je ena izmed najpogosteje uporabljenih tehnologij za povezovanje naprav v
+lokalna omrežja (LAN). Razvit je bil v 70-ih letih prejšnjega stoletja in od takrat
+postaja standard za žična omrežja zaradi svoje preprostosti, zanesljivosti in nizkih
+stroškov implementacije. Temelji na uporabi podatkovnih okvirjev (ang. frames),
+ki se prenašajo po skupnem komunikacijskem mediju, pri čemer lahko omrežne naprave
+komunicirajo med seboj prek stikal in razdelilcev.
+
+Z razvojem omrežij so se pojavile različne različice Ethernet tehnologije,
+ki podpirajo različne hitrosti prenosa podatkov, od prvotnih 10 Mbps pa vse do
+sodobnih hitrosti 1 Gbps, 10 Gbps in več. Ethernet omogoča uporabo različnih topologij
+omrežja, kot so zvezda, vodilo in obroč, ter podpira tako pol- kot tudi polni duplex
+način prenosa podatkov. Zaradi svoje široke uporabe je pomembno razumeti delovanje te
+tehnologije in sposobnost modeliranja različnih omrežnih scenarijev.
+
+V tej seminarski nalogi bomo s pomočjo ogrodja INET v simulacijskem orodju OMNeT++
+modelirali različne primere Ethernet omrežij. S tem bomo pridobili vpogled v delovanje
+Ethernet omrežij, analizirali njihovo zmogljivost ter preučili vpliv različnih parametrov
+na delovanje omrežij. V uvodnem delu bomo predstavili osnove modeliranja Ethernet omrežij
+v ogrodju INET ter opisali nekaj osnovnih primerov omrežij, ki bodo služili kot osnova za
+nadaljnjo analizo.
+
+\newpage
+\tableofcontents
+\newpage
+
+
+\end{document}
