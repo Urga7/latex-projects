@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{array}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+\renewcommand{\figurename}{Slika}
+
+\begin{document}
+
+\title{Predstavitev protokola LDAP}
+\author{Urban Gajšek}
+\date{\today}
+
+\maketitle
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/univerza-v-ljubljani.png}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Namen in uporaba protokola LDAP}
+Namen protokola LDAP (angl. Lightweight Directory Access Protocol) je zagotoviti standardiziran način za dostop do in upravljanje imenikov storitev preko omrežja. Uporablja se predvsem za avtentikacijo, upravljanje uporabnikov in pridobivanje informacij iz imenika.
+\paragraph{}
+Najpogosteje se uporablja za:
+\begin{itemize}
+    \item Avtentikacijo uporabnikov (npr. preverjanje prijav v podjetjih)
+    \item Shranjevanje podatkov o uporabnikih in skupinah (npr. imena, priimki, e-poštni naslovi)
+    \item Upravljanje dotopa in dovoljenj
+    \item Centralizirano upravljanje imenikov za aplikacije in omrežja
+\end{itemize}
+
+\section{Akterji v protokolu LDAP}
+Glavna akterja sta LDAP strežnik, ki shranjuje in upravlja vnose v imeniku, ter LDAP odjemalec, ki pošilja poizvedbe in prejema odgovore od strežnika.
+
+\section{Primer uporabe protokola LDAP}
+Tipičen primer uporabe LDAP je avtentikacija uporabnikov v podjetju.
+\paragraph{}
+Predstavljajmo si naslednji scenarij: Podjetje ima na stotine zaposlenih, ki morajo dostopati do različnih internih aplikacij (e-pošta, kadrovski portal, intranet itd.). Namesto da bi vsaka aplikacija shranjevala uporabniške podatke ločeno, podjetje uporablja LDAP strežnik (npr. Microsoft Active Directory) za centralizirano upravljanje uporabniških računov.
+
+Kako deluje:
+
+    Zaposleni se poskuša prijaviti v kadrovski portal.
+    Kadrovski portal pošlje zahtevo za avtentikacijo LDAP strežniku.
+    LDAP strežnik preveri uporabniško ime in geslo v svoji imenikovi bazi podatkov.
+    Če so podatki pravilni, uporabnik dobi dostop; v nasprotnem primeru je dostop zavrnjen.
+
+Takšen sistem omogoča centralizirano upravljanje uporabnikov, enotno prijavo (SSO) in boljši nadzor varnosti v različnih aplikacijah.
+
+\end{document}
