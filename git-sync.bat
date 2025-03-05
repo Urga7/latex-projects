@@ -4,4 +4,4 @@ git pull
 git add .
 git commit -m "Auto-Sync: %date% %time%"
 git push
-pause
+exit
