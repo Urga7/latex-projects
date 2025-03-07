@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[slovene]{babel}
 \usepackage{graphicx}
 \usepackage{pgfplots}
@@ -7,17 +7,17 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{array}
-\pgfplotsset{compat=1.18}
 \usepackage{amsmath}
+\pgfplotsset{compat=1.18}
 
+% Rename figure captions to Slovene
 \renewcommand{\figurename}{Slika}
 
 \begin{document}
 
 \title{Predstavitev protokola LDAP}
-\author{Urban Gajšek}
+\author{Urban Gaj\v{s}ek}
 \date{\today}
-
 \maketitle
 
 \begin{center}
@@ -28,32 +28,79 @@
 \tableofcontents
 \newpage
 
-\section{Namen in uporaba protokola LDAP}
-Namen protokola LDAP (angl. Lightweight Directory Access Protocol) je zagotoviti standardiziran način za dostop do in upravljanje imenikov storitev preko omrežja. Uporablja se predvsem za avtentikacijo, upravljanje uporabnikov in pridobivanje informacij iz imenika.
+\section{Kaj je LDAP?}
+
+Lightweight Directory Access Protocol (LDAP) je odprt aplikacijski protokol za upravljanje in dostop do imenikov storitev (Directory Service) preko IP omrežja. 
+
 \paragraph{}
-Najpogosteje se uporablja za:
+LDAP je odprt, ker je javno dostopen in definiran v RFC (Request for Comments) dokumentih. Vsak ga lahko implementira, uporablja ali razvija brez licence. Protokol je neodvisen od ponudnikov in platform, kar pomeni, da deluje na različnih operacijskih sistemih in napravah. Kot aplikacijski protokol deluje na aplikacijski plasti (7. plast OSI modela) preko TCP/IP omrežja. Razvit je bil kot lažja alternativa protokolu DAP (Directory Access Protocol), ki je del standarda X.500.
+
+\subsection{Namen in uporaba protokola LDAP}
+Glavni namen LDAP je standardiziran dostop do in upravljanje imenikov storitev preko omrežja. Uporablja se za:
 \begin{itemize}
-    \item Avtentikacijo uporabnikov (npr. preverjanje prijav v podjetjih)
-    \item Shranjevanje podatkov o uporabnikih in skupinah (npr. imena, priimki, e-poštni naslovi)
-    \item Upravljanje dotopa in dovoljenj
-    \item Centralizirano upravljanje imenikov za aplikacije in omrežja
+    \item Centralizirano avtentikacijo,
+    \item Upravljanje uporabnikov in njihovih pravic,
+    \item Pridobivanje podatkov o raznih objektih iz imenika.
 \end{itemize}
 
-\section{Akterji v protokolu LDAP}
-Glavna akterja sta LDAP strežnik, ki shranjuje in upravlja vnose v imeniku, ter LDAP odjemalec, ki pošilja poizvedbe in prejema odgovore od strežnika.
+\subsection{Imenik storitev (Directory Service)}
+Imenik storitev je specializirana baza podatkov, ki hrani informacije o objektih v drevesni strukturi. Objekti so lahko uporabniki, skupine, naprave, aplikacije itd. Podatki v imeniku so pogosto dostopani in redko spreminjani (npr. imena, telefonske številke, gesla, elektronski naslovi itd.).
 
-\section{Primer uporabe protokola LDAP}
-Tipičen primer uporabe LDAP je avtentikacija uporabnikov v podjetju.
+Primeri imenikov storitev: Microsoft Active Directory, OpenLDAP, ApacheDS.
+
+\subsubsection{Zgradba LDAP imenika}
+LDAP imenik je organiziran hierarhično kot drevo. Vozlišča drevesa so objekti, katerih struktura je definirana v shemi. Vsak objekt ima svoj edinstven Distinguished Name (DN), ki ga sestavljajo imena vseh nadrejenih objektov in lastno ime.
+
+Primer DN:
+\begin{quote}
+    \texttt{dc=example,dc=com,ou=administracija,cn=Janez}
+\end{quote}
+(Domena \texttt{example.com}, skupina \texttt{administracija}, oseba \texttt{Janez}).
+
+\section{Delovanje protokola LDAP}
+
+\subsection{Akterji v protokolu LDAP}
+Glavna akterja v LDAP protokolu sta:
+\begin{itemize}
+    \item \textbf{LDAP strežnik} - hrani in upravlja vnose v imeniku.
+    \item \textbf{LDAP odjemalec} - poizveduje in prejema odgovore od strežnika (npr. e-poštni strežnik, brskalnik, aplikacija za upravljanje uporabnikov).
+\end{itemize}
+
+\subsection{Potek komunikacije}
+LDAP deluje po modelu strežnik-odjemalec:
+\begin{enumerate}
+    \item Odjemalec vzpostavi povezavo s strežnikom.
+    \item Pošlje zahteve za podatke ali spremembe.
+    \item Strežnik obdela zahtevo in vrne odgovor.
+    \item Po končani komunikaciji se povezava prekine.
+\end{enumerate}
+
+LDAP povezave same po sebi niso kriptirane, zato je za varnost priporočljiva uporaba TLS.
+
+\subsubsection{Vrste LDAP operacij}
+LDAP podpira več vrst operacij:
+\begin{itemize}
+    \item \textbf{Add} - doda nov vnos v imenik.
+    \item \textbf{Bind} - avtentikacija uporabnika.
+    \item \textbf{Delete} - izbriše vnos iz imenika.
+    \item \textbf{Search and compare} - iskanje in primerjava vnosov.
+    \item \textbf{Modify} - spreminjanje obstoječih vnosov.
+    \item \textbf{Modify DN} - spreminjanje DN obstoječega vnosa.
+\end{itemize}
+
+\section{Primeri uporabe protokola LDAP}
+
+Ena najpogostejših uporab LDAP je avtentikacija uporabnikov v podjetjih.
+
 \paragraph{}
-Predstavljajmo si naslednji scenarij: Podjetje ima na stotine zaposlenih, ki morajo dostopati do različnih internih aplikacij (e-pošta, kadrovski portal, intranet itd.). Namesto da bi vsaka aplikacija shranjevala uporabniške podatke ločeno, podjetje uporablja LDAP strežnik (npr. Microsoft Active Directory) za centralizirano upravljanje uporabniških računov.
+Predstavljajmo si scenarij, kjer podjetje z več sto zaposlenimi uporablja LDAP za upravljanje dostopa do internih aplikacij (e-pošta, kadrovski portal, intranet itd.). Namesto da bi vsaka aplikacija shranjevala uporabniške podatke ločeno, se uporablja centraliziran LDAP strežnik (npr. Microsoft Active Directory).
 
-Kako deluje:
-
-    Zaposleni se poskuša prijaviti v kadrovski portal.
-    Kadrovski portal pošlje zahtevo za avtentikacijo LDAP strežniku.
-    LDAP strežnik preveri uporabniško ime in geslo v svoji imenikovi bazi podatkov.
-    Če so podatki pravilni, uporabnik dobi dostop; v nasprotnem primeru je dostop zavrnjen.
-
-Takšen sistem omogoča centralizirano upravljanje uporabnikov, enotno prijavo (SSO) in boljši nadzor varnosti v različnih aplikacijah.
+\paragraph{Potek avtentikacije:}
+\begin{enumerate}
+    \item Zaposleni vnese uporabniško ime in geslo v kadrovski portal.
+    \item Portal pošlje zahtevo za avtentikacijo LDAP strežniku.
+    \item LDAP strežnik preveri podatke v svoji bazi.
+    \item Če so podatki pravilni, uporabnik dobi dostop; sicer je dostop zavrnjen.
+\end{enumerate}
 
 \end{document}
